@@ -20,31 +20,16 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
-//#define USE_MATRIX_I2C
-
-/* Select hand configuration */
-
-// #define MASTER_LEFT
-// #define MASTER_RIGHT
 #define EE_HANDS
 
 //#define TAPPING_FORCE_HOLD
 //#define TAPPING_TERM 100
-
-#ifndef NO_DEBUG
-#define NO_DEBUG
-#endif // !NO_DEBUG
-#if !defined(NO_PRINT) && !defined(CONSOLE_ENABLE)
-#define NO_PRINT
-#endif // !NO_PRINT
 
 #define NO_ACTION_MACRO
 #define NO_ACTION_FUNCTION
 #define DISABLE_LEADER
 
 #ifdef RGBLIGHT_ENABLE
-    //#define RGBLIGHT_EFFECT_BREATHING
-    //#define RGBLIGHT_EFFECT_STATIC_GRADIENT
     #define RGBLIGHT_LIMIT_VAL 120
     #define RGBLIGHT_HUE_STEP 5
     #define RGBLIGHT_SAT_STEP 7

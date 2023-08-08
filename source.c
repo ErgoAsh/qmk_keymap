@@ -5,6 +5,8 @@
 #include "keycode.h"
 #include "process_key_override.h"
 
+#define _ENGRAM 1
+
 const key_override_t T_override = ko_make_with_layers(MOD_MASK_SHIFT, KC_QUOT, KC_LPRN, (1 << _ENGRAM)); // ' -> (
 const key_override_t Y_override = ko_make_with_layers(MOD_MASK_SHIFT, KC_DQUO, KC_RPRN, (1 << _ENGRAM)); // " -> ^
 
