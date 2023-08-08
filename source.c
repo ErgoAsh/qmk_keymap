@@ -23,3 +23,12 @@ const key_override_t **key_overrides = (const key_override_t *[]){
     &B_override, &N_override,
     NULL // Null terminate the array of overrides!
 };
+
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+#ifdef OLED_ENABLE
+    if (record->event.pressed) {
+        set_keylog(keycode, record);
+    }
+#endif
+    return true;
+}
