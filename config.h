@@ -22,8 +22,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #define EE_HANDS
 
-//#define TAPPING_FORCE_HOLD
-#define TAPPING_TERM 250
+#define TAPPING_TERM 75
 
 #define NO_ACTION_MACRO
 #define NO_ACTION_FUNCTION
