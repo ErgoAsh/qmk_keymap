@@ -1,4 +1,4 @@
-SRC += source.c
+SRC += ./source.c
 
 MOUSEKEY_ENABLE = yes
 KEY_OVERRIDE_ENABLE = yes
