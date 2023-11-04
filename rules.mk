@@ -1,4 +1,4 @@
-INTROSPECTION_KEYMAP_C += ergoash.c
+SRC += ergoash.c
 
 MOUSEKEY_ENABLE = yes
 KEY_OVERRIDE_ENABLE = yes
