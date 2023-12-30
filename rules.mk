@@ -11,4 +11,5 @@ SPLIT_KEYBOARD  = yes
 
 LTO_ENABLE      = no    # Enable Link Time Optimization for saving space
 COMMAND_ENABLE   = no    # Disable commands for debug and configuration
+CAPS_WORD_ENABLE = yes
 

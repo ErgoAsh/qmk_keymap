@@ -22,17 +22,18 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #define EE_HANDS
 
-#define TAPPING_TERM 150
+#define TAPPING_TERM 175
+#define BOTH_SHIFTS_TURNS_ON_CAPS_WORD
 
 #define NO_ACTION_MACRO
 #define NO_ACTION_FUNCTION
 #define DISABLE_LEADER
 
 #ifdef RGBLIGHT_ENABLE
-    #define RGBLIGHT_LIMIT_VAL 120
-    #define RGBLIGHT_HUE_STEP 5
-    #define RGBLIGHT_SAT_STEP 7
-    #define RGBLIGHT_VAL_STEP 7
+#    define RGBLIGHT_LIMIT_VAL 120
+#    define RGBLIGHT_HUE_STEP 5
+#    define RGBLIGHT_SAT_STEP 7
+#    define RGBLIGHT_VAL_STEP 7
 #endif
 
 #define OLED_FONT_H "keyboards/crkbd/lib/glcdfont.c"
