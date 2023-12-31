@@ -7,7 +7,7 @@
   "layout": "LAYOUT_split_3x6_3",
   "layers": [
     [
-      "KC_TAB",
+      "LT(6,KC_TAB)",
       "KC_Q",
       "KC_W",
       "KC_E",
@@ -36,7 +36,7 @@
       "KC_X",
       "KC_C",
       "KC_V",
-      "LT(6,KC_B)",
+      "KC_DEL",
       "KC_N",
       "KC_M",
       "KC_COMM",
@@ -75,7 +75,7 @@
       "LT(7,KC_S)",
       "RGUI_T(KC_N)",
       "KC_Q",
-      "KC_LALT",
+      "KC_LCAP",
       "KC_G",
       "KC_X",
       "KC_J",
@@ -87,15 +87,15 @@
       "KC_F",
       "KC_P",
       "KC_Z",
-      "RALT_T(KC_TAB)",
-      "MO(3)",
-      "MO(5)",
-      "MO(4)",
+      "LT(5,KC_TAB)",
+      "LT(3,KC_PSTE)",
+      "RALT_T(KC_COPY)",
+      "RALT_T(QK_MACRO_0)",
       "KC_SPC",
-      "RALT_T(KC_ENT)"
+      "LT(4,KC_ENT)"
     ],
     [
-      "KC_TAB",
+      "LT(6,KC_TAB)",
       "KC_Q",
       "KC_W",
       "KC_E",
@@ -124,7 +124,7 @@
       "KC_X",
       "KC_C",
       "KC_V",
-      "LT(6,KC_B)",
+      "KC_DEL",
       "KC_N",
       "KC_M",
       "KC_COMM",
@@ -359,5 +359,5 @@
       "KC_NO"
     ]
   ],
-  "author": ""
+  "author": "ergoash"
 }
