@@ -20,3 +20,29 @@ const key_override_t **key_overrides = (const key_override_t *[]){
     &T_override, &Y_override, &G_override, &H_override, &B_override, &N_override,
     NULL // Null terminate the array of overrides!
 };
+
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case KC_F13: // Copy
+            if (record->event.pressed) {
+                SEND_STRING(SS_LCTL("c"));
+            }
+            return false;
+        case KC_F14: // Paste
+            if (record->event.pressed) {
+                SEND_STRING(SS_LCTL("v"));
+            }
+            return false;
+        case KC_F15: // Remove previous word
+            if (record->event.pressed) {
+                SEND_STRING(SS_LCTL("w"));
+            }
+            return false;
+        case KC_F16: // Remove previous word
+            if (record->event.pressed) {
+                SEND_STRING(SS_LCTL("\b"));
+            }
+            return false;
+    }
+    return true;
+};
