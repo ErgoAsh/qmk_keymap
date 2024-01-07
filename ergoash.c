@@ -1,4 +1,4 @@
-#include "ergoash.h"
+#include QMK_KEYBOARD_H
 
 #include "keycodes.h"
 #include "keycode.h"
@@ -23,26 +23,29 @@ const key_override_t **key_overrides = (const key_override_t *[]){
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
-        case KC_F13: // Copy
-            if (record->event.pressed) {
+        case LT(3, KC_F13): // Copy
+            if (record->tap.count && record->event.pressed) {
                 SEND_STRING(SS_LCTL("c"));
+                return false;
             }
-            return false;
-        case KC_F14: // Paste
-            if (record->event.pressed) {
+            break;
+        case LT(4, KC_F14): // Paste
+            if (record->tap.count && record->event.pressed) {
                 SEND_STRING(SS_LCTL("v"));
+                return false;
             }
-            return false;
-        case KC_F15: // Remove previous word
-            if (record->event.pressed) {
+            break;
+        case LT(6, KC_F15): // Remove previous word
+            if (record->tap.count && record->event.pressed) {
                 SEND_STRING(SS_LCTL("w"));
+                return false;
             }
-            return false;
-        case KC_F16: // Remove previous word
-            if (record->event.pressed) {
+            break;
+        case LALT_T(KC_F16): // Remove previous word
+            if (record->tap.count && record->event.pressed) {
                 SEND_STRING(SS_LCTL("\b"));
+                return false;
             }
-            return false;
     }
     return true;
 };
