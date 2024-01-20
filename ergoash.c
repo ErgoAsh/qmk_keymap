@@ -21,6 +21,8 @@ const key_override_t **key_overrides = (const key_override_t *[]){
     NULL // Null terminate the array of overrides!
 };
 
+bool is_using_ctrl_w = true;
+
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case LT(3, KC_F13): // Copy
@@ -37,15 +39,26 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             break;
         case LT(6, KC_F15): // Remove previous word
             if (record->tap.count && record->event.pressed) {
-                SEND_STRING(SS_LCTL("w"));
+                if (is_using_ctrl_w) {
+                    SEND_STRING(SS_LCTL("w"));
+                } else {
+                    SEND_STRING(SS_LCTL("\b"));
+                }
                 return false;
             }
             break;
-        case LALT_T(KC_F16): // Remove previous word
-            if (record->tap.count && record->event.pressed) {
-                SEND_STRING(SS_LCTL("\b"));
+        case KC_F16: // Change word-deletion mode
+            if (record->event.pressed) {
+                is_using_ctrl_w = !is_using_ctrl_w;
                 return false;
             }
+            break;
+        case LALT_T(KC_F17):
+            if (record->tap.count && record->event.pressed) {
+                caps_word_toggle();
+                return false;
+            }
+            break;
     }
     return true;
 };

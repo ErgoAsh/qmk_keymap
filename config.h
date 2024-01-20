@@ -22,8 +22,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #define EE_HANDS
 
-#define TAPPING_TERM 175
-#define BOTH_SHIFTS_TURNS_ON_CAPS_WORD
+#define TAPPING_TERM 170
 
 #define NO_ACTION_MACRO
 #define NO_ACTION_FUNCTION
